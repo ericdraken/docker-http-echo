@@ -1,19 +1,13 @@
-FROM node:9.2-alpine
+FROM node:alpine
 
 WORKDIR /app
 
 COPY . .
 
-RUN rm -rf screenshots/
+RUN npm install -g --production
 
-RUN npm install --production
+EXPOSE 8080
 
-RUN apk --no-cache add openssl
+USER node
 
-RUN sh generate-cert.sh
-
-EXPOSE 80 443
-
-
-ENTRYPOINT ["node", "./index.js"]
-CMD []
+CMD ["node", "./index.js"]

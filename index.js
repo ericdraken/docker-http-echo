@@ -1,7 +1,6 @@
 var express = require('express')
 const morgan = require('morgan');
 var http = require('http')
-var https = require('https')
 var app = express()
 const os = require('os');
 const jwt = require('jsonwebtoken');
@@ -51,13 +50,8 @@ app.all('*', (req, res) => {
   console.log(echo);
 });
 
-const sslOpts = {
-  key: require('fs').readFileSync('privkey.pem'),
-  cert: require('fs').readFileSync('fullchain.pem'),
-};
-
-http.createServer(app).listen(80);
-https.createServer(sslOpts,app).listen(443);
+http.createServer(app).listen(8080);
+console.log('-- Server Listening --')
 
 let calledClose = false;
 
