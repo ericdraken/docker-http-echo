@@ -1,4 +1,4 @@
-Note: forked from `mendhak/docker-http-https-echo` - this version does not support https.
+**Note: forked from `mendhak/docker-http-https-echo`. This version does not support https and uses port 8080.**
 
 Docker image which echoes various HTTP request properties back to client, as well as in docker logs. 
 
