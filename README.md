@@ -1,3 +1,5 @@
+Note: forked from `mendhak/docker-http-https-echo` - this version does not support https.
+
 Docker image which echoes various HTTP request properties back to client, as well as in docker logs. 
 
 ![browser](https://raw.githubusercontent.com/mendhak/docker-http-https-echo/master/screenshots/screenshot.png)
